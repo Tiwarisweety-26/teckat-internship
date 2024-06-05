@@ -33,14 +33,84 @@ function App() {
   //if(student1.name===student2.name){
   //fun1();
   //}
-const arr1 =[1,2,3,4,5];
+
+/*const arr1 =[1,2,3,4,5];
 for (let item of arr1)
   {
     console.log(item);
+  }*/
+/*const people = [
+  {name : "sweety",age: 20},
+  {name : "disha",age :20},
+  {name : "khushi",age:20},
+];*/
+/*for(let person of people){
+
+  console.log(`Name: ${person.name},Age:${person.age}`);
+
+  }*/
+  //const student = [
+    //{name : "sweety",age: 20},
+    //{name : "disha",age :20},
+    //{name : "khushi",age:20},
+  //];
+   //student.forEach((person)=>{
+    //console.log(`Name: ${person.name},Age:${person.age}`);
+ 
+   //});
+   /*const employee = {
+    name: "sweety",
+    age:20,
+    occupation: "Software Engineer",
+   };
+   
+   
+   //console.log(employee.occupation);
+
+for (const key in employee){
+  if(employee.hasOwnProperty(key)){
+    console.log(`${key}:${employee[key]}`);
   }
+}*/
+//=========================================================================================================
+/*const employees=[
+  { name :"sweety",age:20,salary:80},
+  {name:"disha",age:21,salary:50},
+  { name :"harjot",age:23,salary:70},
+  {name:"beauty",age:18,salary:60},
+];
+
+const mappedEmployees = employees.map((item)=> {
+ 
+return{
+  ...item,
+  salary: item.salary + 100,
+};
+},
+[]);
+
+console.log('mappedEmployees', mappedEmployees);*/
+//============================================================================
+   
+const products = [
+  {id:101,name:"laptop",price:10000,category:"electronics"},
+  {id:102,name:"shirt",price:250,category:"clothing"},
+  {id:103,name:"coffee maker",price:550,category:"home appliances"},
+  {id:104,name:"pants",price:50,category:"clothing"},
+
+];
+const  filteredProducts = products.filter((item)=>{
+  return item.category==="clothing";
+});
+console.log("filteredProducts",filteredProducts );
+
+ const foundProducts = products.find((item)=>{
+  return item.id===102;
+});
+console.log("foundProducts",foundProducts);
 
 
-   return (
+return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
